@@ -7,6 +7,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow:hidden;
+    min-width: 100%;
 }
 /*NAVABAR*/
 
@@ -211,6 +212,7 @@ html, body {
 
 .footer-links {
     margin-top: auto;
+    padding-top: 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -276,7 +278,7 @@ html, body {
 
     .fa {
       position: fixed;
-      right: 5%;
+      right: 2%;
       top: 5%;
     }
     .topnav.responsive .icon {
@@ -289,14 +291,25 @@ html, body {
         float: none;
         display: block;
         text-align: left;
+        font-size: 1rem;
+        text-align: center;
     }
 
     .topnav.responsive .nav-right {
         display: block;
     }
 
+    .nav-right {
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+     }
+
     .home {
-        margin-top: 55%;
+        margin-top: 5%;
     }
 
     

@@ -6,9 +6,9 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow:hidden;
+    //overflow:hidden;
   }
-/*NAVABAR*/
+/*     NAVABAR     */
 
 .top-top {
   position: relative;
@@ -59,7 +59,7 @@ html, body {
     padding-left: auto;
     font-family: 'Roboto Condensed', sans-serif;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     width: auto;
     transition:  all 0.5s ease;
     outline: 0;
@@ -151,7 +151,7 @@ html, body {
     transition: width .3s;
 }
 
-  /*BACK TO TOP ARROW*/
+/*     BACK TO TOP ARROW      */
 #return-to-top {
     position: fixed;
     bottom: 20px;
@@ -190,16 +190,72 @@ html, body {
     top: 5px;
   }
 
-/*FOOTER*/
+
+/*     NEED HELP?    */
+
+.message {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.8;
+  margin: 6% 6% 3% 6%;
+}
+
+.phone-numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.headers {
+  font-family: 'Playfair Display', serif;
+  padding: 4% 0;
+}
+
+.phone-right, .phone-left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 6%;
+}
+
+.phone-right {
+  border-right: 1px solid rgb(218, 218, 218);
+}
+
+.phone, .message a {
+  text-decoration: none;
+  color: rgb(65, 65, 65);
+}
+.one {
+  color: rgb(218, 218, 218);
+  width: 80%;
+  margin: 3% auto;
+}
+
+ul li {
+  padding: 2% 0;
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  font-family: 'EB Garamond', serif;
+  color: rgb(65, 65, 65);
+}
+
+/*     FOOTER      */
 
 .footer-links {
     margin-top: auto;
+    padding-top: 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: .8rem;
     font-weight: 300;
     bottom: 0;
     width: 100%;
@@ -233,11 +289,13 @@ html, body {
     .logo-div {
         position: absolute;
     }
+
     .logo {
       height: 3rem;
       border-bottom: 0 !important;
       float: left;
     }
+
     .topnav a.icon {
       float: right;
       display: block;
@@ -247,11 +305,12 @@ html, body {
 
     .topnav.responsive {
       position: fixed;
+      margin-top: 2%;
     }
 
     .fa {
         position: fixed;
-        right: 5%;
+        right: 2%;
         top: 5%;
     }
 
@@ -264,14 +323,25 @@ html, body {
       float: none;
       display: block;
       text-align: left;
+      font-size: 1rem;
+      text-align: center;
     }
   
     .topnav.responsive .nav-right {
       display: block;
     }
 
+    .nav-right {
+      width: 800px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
     .home {
-        margin-top: 55%;
+        margin-top: 5%;
     }
 
     .footer-links {
