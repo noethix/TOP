@@ -239,7 +239,12 @@
 
     .topnav.responsive {
       position: fixed;
-     
+    }
+
+    .fa {
+      position: fixed;
+      right: 5%;
+      top: 5%;
     }
     .topnav.responsive .icon {
       position: absolute;

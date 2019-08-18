@@ -22,7 +22,12 @@
 
     <!--Navbar-->
     <div class="login">Login</div>
+    
     <div class="topnav" id="topnav">
+    
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+        </a>
         
         <div class="logo-div">
                 <img class="logo" src="{{ asset('PICS/TOP_banner.png') }}" alt="the outside project logo"></img>
@@ -30,7 +35,6 @@
             </div>
             
             
-
 
         <nav class="nav-right">
             <a class="home border-link" href="{{ path ('home') }}">Home</a>
@@ -43,9 +47,7 @@
             <a class="escape border-link" href="https://www.google.co.uk/">Escape Route</a>
         </nav>
 
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
+
     </div>
 
     {% block body %}{% endblock %}
