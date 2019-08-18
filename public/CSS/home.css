@@ -1,32 +1,56 @@
 * {
     margin: 0;
     padding: 0;
-  }
+}
 
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+}
 /*NAVABAR*/
+
+.top-top {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 1%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.info {
+    margin: auto;
+    text-align: center;
+    font-size: .8rem;
+}
+
 .logo-div {
     display: flex;
     justify-content: center;
-  align-items: center;
- 
+    align-items: center;
+
 
 }
-.logo{
+
+.logo {
     height: 14rem;
-   clear: right;
+    clear: right;
 }
 
 .login {
-  position: relative;
-   display: flex;
-   justify-content: flex-end;
-   margin-right: 1%;
-   font-family: 'Roboto Condensed', sans-serif;
-   text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1%;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
 }
 
 
-.login:hover{
+.login:hover {
     color: rgb(100, 100, 100);
 }
 
@@ -41,7 +65,7 @@
     text-align: center;
     text-decoration: none;
     margin-top: 2%;
-  }
+}
 
 
 .topnav a {
@@ -53,13 +77,13 @@
     text-decoration: none;
     font-size: 1.2rem;
     width: auto;
-    transition:  all 0.5s ease;
+    transition: all 0.5s ease;
     outline: 0;
-  }
-  
-  .topnav .icon {
+}
+
+.topnav .icon {
     display: none;
-  }
+}
 
 .border-link {
     display: inline-block;
@@ -143,7 +167,7 @@
     transition: width .3s;
 }
 
-  /*BACK TO TOP ARROW*/
+/*BACK TO TOP ARROW*/
 #return-to-top {
     position: fixed;
     bottom: 20px;
@@ -162,8 +186,9 @@
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-  }
-  #return-to-top i {
+}
+
+#return-to-top i {
     color: #002FA7;
     margin: 0;
     position: relative;
@@ -175,12 +200,12 @@
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-  }
-  
-  #return-to-top:hover i {
+}
+
+#return-to-top:hover i {
     color: rgba(0, 47, 167, 0.637);
     top: 5px;
-  }
+}
 
 /*FOOTER*/
 
@@ -188,53 +213,61 @@
     margin-top: auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
     bottom: 0;
     width: 100%;
-    padding: 30px 0 0 30px;
-    transition:  all 0.5s ease;
-  }
+    transition: all 0.5s ease;
+}
 
-  .left, .middle, .right {
+.left,
+.middle,
+.right {
     display: flex;
     text-align: left;
-    justify-content: center;
-    flex-direction: column;
-    line-height: 2.5;
-    margin-bottom: 40px;
-  }
-  
- .footer-twitter {
-     height: 30px;
-     width: 30px;
-     color: #000;
- }
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.footer-twitter,
+.footer-insta,
+.footer-fb {
+    height: 20px;
+    padding: 0 8px;
+}
 
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
+    .info {
+        font-size: .6rem;
+    }
+
     .topnav a:not(.logo) {
-      display: none;
+        display: none;
     }
 
     .login {
         font-size: .8rem;
     }
+
     .logo-div {
         position: absolute;
     }
+
     .logo {
-      height: 3rem;
-      border-bottom: 0 !important;
-      float: left;
+        height: 3rem;
+        border-bottom: 0 !important;
+        float: left;
     }
+
     .topnav a.icon {
-      float: right;
-      display: block;
-      border-bottom: 0;
-      padding: 2%;
+        float: right;
+        display: block;
+        border-bottom: 0;
+        padding: 2%;
     }
 
     .topnav.responsive {
@@ -247,20 +280,32 @@
       top: 5%;
     }
     .topnav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
+
     .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
+        float: none;
+        display: block;
+        text-align: left;
     }
-  
+
     .topnav.responsive .nav-right {
-      display: block;
+        display: block;
     }
 
     .home {
-        margin-top: 25%;
+        margin-top: 55%;
+    }
+
+    
+    .footer-links {
+        font-size: .6rem;
+        flex-direction: column;
+    }
+    
+    .footer-twitter, .footer-insta, .footer-fb {
+        height: 10px;
+        padding: 0 4px;
     }
