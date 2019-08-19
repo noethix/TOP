@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Subject;
 use App\Entity\Contact;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -29,7 +30,7 @@ class ContactType extends AbstractType
 
             ->add('Subject', EntityType::class, [
                 'class' => Subject::class,
-                'choice label' => 'name',
+                'choice_label' => 'name',
                 'label' => 'Choose a subject *',
                 'placeholder' => '- - ',
             ])
