@@ -190,6 +190,30 @@ html, body {
     top: 5px;
   }
 
+/*     THE PROJECT     */
+
+.project {
+  display: flex;
+}
+
+.who {
+  flex-grow: 1 ;
+
+}
+
+.timetable {
+  flex-grow: 2 ;
+}
+
+.shelter {
+  flex-grow: 1 ;
+}
+
+.who-headers {
+  text-align: center;
+  margin: 4% 0;
+  padding:0 !important;
+}
 
 /*     NEED HELP?    */
 
