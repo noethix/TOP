@@ -26,7 +26,7 @@ class ContactController extends AbstractController
     }
 
     /**
-     * @Route("/contact", name="contact_new", methods={"GET","POST"})
+     * @Route("/newcontact", name="contact_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -48,8 +48,12 @@ class ContactController extends AbstractController
                 'notice',
                 'Message sent'
             );
+            
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($contact);
+            $entityManager->flush();
 
-            return $this->redirectToRoute('contact');
+            return $this->redirectToRoute('contact_index');
         }
 
         return $this->render('contact/new.html.twig', [
