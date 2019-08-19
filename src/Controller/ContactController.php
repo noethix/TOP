@@ -26,7 +26,7 @@ class ContactController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="contact_new", methods={"GET","POST"})
+     * @Route("/contact", name="contact_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -35,11 +35,21 @@ class ContactController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $contact->setName($form['Name']->getData());
+            $contact->setEmail($form['Email']->getData());
+            $contact->setSubject($form['Subject']->getData());
+            $contact->setContent($form['Content']->getData());
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($contact);
             $entityManager->flush();
 
-            return $this->redirectToRoute('contact_index');
+            $this->addFlash(
+                'notice',
+                'Message sent'
+            );
+
+            return $this->redirectToRoute('contact');
         }
 
         return $this->render('contact/new.html.twig', [
