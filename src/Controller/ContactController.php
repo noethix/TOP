@@ -35,11 +35,6 @@ class ContactController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $contact->setName($form['Name']->getData());
-            $contact->setEmail($form['Email']->getData());
-            $contact->setSubject($form['Subject']->getData());
-            $contact->setContent($form['Content']->getData());
-
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($contact);
             $entityManager->flush();
@@ -48,12 +43,9 @@ class ContactController extends AbstractController
                 'notice',
                 'Message sent'
             );
-            
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($contact);
-            $entityManager->flush();
 
-            return $this->redirectToRoute('contact_index');
+            return $this->redirectToRoute('home'); 
+
         }
 
         return $this->render('contact/new.html.twig', [

@@ -22,7 +22,7 @@
 {% endfor %}
 
 
-<h1 class="headers headers-contact">If you are in crisis or homeless please see our <a href="{{ path ('help') }}">Need Help? </a>page for more information.</h1>
+<h1 class="headers headers-contact headers-contact-top">If you are in crisis or homeless please see our <a href="{{ path ('help') }}">Need Help? </a>page for more information.</h1>
 
 <h2 class="warning headers-contact">We do not let press / students / researchers into our shelter. Please be respectful and do not ask.</h2>
 
@@ -30,5 +30,4 @@
 
     {{ include('contact/_form.html.twig') }}
 
-    <a href="{{ path('contact_index') }}">back to list</a>
 {% endblock %}

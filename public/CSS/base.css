@@ -192,7 +192,7 @@ html, body {
 
 /*     THE PROJECT     */
 
-.project {
+.project-TOP {
   display: flex;
 }
 
@@ -286,7 +286,7 @@ ul li a {
 }
 
 .form {
-  margin: 1% 0;
+  margin: 2% 0;
 }
 
 .contact-form{
@@ -298,16 +298,38 @@ ul li a {
   margin-right: auto;
   margin-left: auto;
   font-family: 'EB Garamond', serif;
+  font-size: 1.3rem;
 }
 
 form input, form select {
-  height: 23px;
-  border: 1px solid rgb(197, 197, 197);
+  height: 28px;
+  border: 1px solid rgb(212, 212, 212);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  padding: 1%;
+}
+
+form select {
+  height: 40px;
 }
 
 form textarea {
-  height: 103px;
-  border: 1px solid rgb(197, 197, 197);
+  height: 123px;
+  border: 1px solid rgb(212, 212, 212);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  padding: 1%;
+}
+
+#contact_save {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgb(212, 212, 212);
+  font-family: 'EB Garamond', serif;
+  font-size: 1.3rem;
+  cursor: pointer;
 }
 
 /*     FOOTER      */
@@ -342,9 +364,13 @@ form textarea {
 
 
   @media screen and (max-width: 800px) {
-      .info {
-          font-size: .6rem;
-      }
+
+/*      NAVBAR     */
+
+    .info {
+      font-size: .6rem;
+    }
+
     .topnav a:not(.logo) {
       display: none;
     }
@@ -410,6 +436,43 @@ form textarea {
         margin-top: 5%;
     }
 
+/*     NEED HELP?     */
+
+    .message {
+      padding-top: 11%;
+    }
+
+    .one {
+      margin: 6% auto;
+    }
+
+    .phone-numbers {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .phone-right, .phone-left {
+      border-right: none;
+      padding-bottom: 6%;
+    }
+
+
+/*     CONTACT US     */
+
+    .contact-form{
+      width: 90%;
+    }
+
+    .headers-contact-top {
+      padding-top: 11%;
+    }
+
+    .headers-contact {
+      padding-right: 2%;
+      padding-left: 2%;
+    }
+
+/*     FOOTER     */
     .footer-links {
         font-size: .6rem;
         flex-direction: column;
@@ -419,3 +482,5 @@ form textarea {
         height: 10px;
         padding: 0 4px;
     }
+
+  }
