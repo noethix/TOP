@@ -7,3 +7,5 @@ easy_admin:
             class: App\Entity\Notice
         User:
             class: App\Entity\User
+        Subject:
+            class: App\Entity\Subject
