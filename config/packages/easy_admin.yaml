@@ -3,6 +3,15 @@ easy_admin:
     entities:
         News:
             class: App\Entity\News
+            list:
+                fields:
+                    - { property: 'photo', type: 'image' ,  base_path: 'public\uploads\files\' }
+            form:
+                fields:
+                    - { property: 'Title' }
+                    - { property: 'Date'}
+                    - { property: 'Content', type: 'text_editor' }
+                    - { property: 'photo', type: 'file_upload' , type_options: { upload_dir: 'public\uploads\files\' , upload_filename: '[year]/[month]/[day]/[slug]-[contenthash].[extension]' }  }
         Notice:
             class: App\Entity\Notice
         User:
