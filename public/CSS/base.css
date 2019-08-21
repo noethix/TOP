@@ -198,7 +198,7 @@ html, body {
 
 .who {
   flex-grow: 1 ;
-
+  width: 5%;
 }
 
 .timetable {
@@ -207,13 +207,69 @@ html, body {
 
 .shelter {
   flex-grow: 1 ;
+  width: 5%;
 }
 
 .who-headers {
+  font-family: 'Playfair Display', serif;
   text-align: center;
-  margin: 4% 0;
-  padding:0 !important;
 }
+
+.community-header {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
+.who, .timetable, .shelter {
+  margin-top: 5%
+}
+
+.project-text {
+  padding: 10%;
+  text-align: justify;
+}
+
+.who, .timetable {
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-image: 
+  linear-gradient(to bottom, #ffffff, rgba(218, 218, 218)) 1 100%;
+}
+
+.shelter-pic, .who-pic {
+  width: 100%;
+  max-width: 80%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hr-two {
+  color: rgb(218, 218, 218);
+  width: 80%;
+  height:1px;
+  margin: 3% auto;
+}
+.timetable-details {
+  padding: 3% 5% 5% 5%;
+  text-align: center;
+}
+
+.community-activities {
+  margin: 2% 0;
+}
+
+.news {
+  margin-top: 5%;
+}
+
+
+.news {
+  padding: 0 3%;
+}
+
 
 /*     NEED HELP?    */
 
@@ -251,11 +307,13 @@ html, body {
   text-decoration: none;
   color: rgb(65, 65, 65);
 }
+
 .one {
   color: rgb(218, 218, 218);
   width: 80%;
   margin: 3% auto;
 }
+
 
 ul li {
   padding: 2% 0;
