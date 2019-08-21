@@ -1,18 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Notice Board{% endblock %}
-
-
-{% block stylesheets %}
-
-<link rel="stylesheet" href="{{asset('../public/CSS/base.css')}}">
-
-{% endblock %}
-
+{% block title %}Notice index{% endblock %}
 
 {% block body %}
-
-<h1 class="headers">Notice Board</h1>
+    <h1>Notice index</h1>
 
     <table class="table">
         <thead>
@@ -46,5 +37,5 @@
         </tbody>
     </table>
 
-
+    <a href="{{ path('notice_new') }}">Create new</a>
 {% endblock %}

@@ -2,8 +2,13 @@
 
 namespace App\Controller;
 
+use App\Entity\News;
+use App\Repository\NewsRepository;
+use App\Entity\Notice;
+use App\Repository\NoticeRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response;
 
 class ClientController extends AbstractController
 {
@@ -21,30 +26,33 @@ class ClientController extends AbstractController
     /**
      * @Route("/home", name="home")
      */
-    public function home()
+    public function home(NoticeRepository $noticeRepository): Response
     {
         return $this->render('client/home.html.twig', [
-            'controller_name' => 'ClientController',
+            'notices' => $noticeRepository->findAll(Notice::class),
         ]);
     }
 
     /**
      * @Route("/project", name="project")
      */
-    public function project()
+    public function project(NewsRepository $newsRepository): Response
     {
         return $this->render('client/project.html.twig', [
             'controller_name' => 'ClientController',
+            'news' => $newsRepository->findByLastThree(News::class),
+            
         ]);
     }
 
     /**
      * @Route("/notice", name="notice")
      */
-    public function notice()
+    public function notice(NoticeRepository $noticeRepository): Response
     {
         return $this->render('client/notice.html.twig', [
             'controller_name' => 'ClientController',
+            'notices' => $noticeRepository->findAll(),
         ]);
     }
 
