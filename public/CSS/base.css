@@ -289,7 +289,7 @@ ul li a {
   margin: 2% 0;
 }
 
-.contact-form{
+form{
   display: flex;
   align-items: left;
   flex-direction: column;
@@ -323,7 +323,7 @@ form textarea {
   padding: 1%;
 }
 
-#contact_save {
+.btn-contact {
   width: 100%;
   height: 40px;
   border: 1px solid rgb(212, 212, 212);

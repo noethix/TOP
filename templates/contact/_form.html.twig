@@ -1,4 +1,23 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+<div class="form">
+      {{ form_row(form.Name) }}
+   </div>
+
+   <div class="form">
+      {{ form_row(form.Email) }}
+   </div>
+   
+   <div class="form">
+         {{ form_row(form.Subject) }}
+   </div>
+
+   <div class="form">
+         {{ form_row(form.Content) }}
+   </div>
+   
+  <div class="form">
+       <button class="btn-contact">{{ button_label|default('Save') }}</button>
+   </div>
+
+    
 {{ form_end(form) }}
