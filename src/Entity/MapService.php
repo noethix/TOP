@@ -46,6 +46,11 @@ class MapService
      */
     private $Status;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $coordinate;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -119,6 +124,18 @@ class MapService
     public function setStatus(bool $Status): self
     {
         $this->Status = $Status;
+
+        return $this;
+    }
+
+    public function getCoordinate(): ?string
+    {
+        return $this->coordinate;
+    }
+
+    public function setCoordinate(string $coordinate): self
+    {
+        $this->coordinate = $coordinate;
 
         return $this;
     }

@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\News;
 use App\Repository\NewsRepository;
 use App\Entity\Notice;
+use App\Repository\MapServiceRepository;
 use App\Repository\NoticeRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -26,10 +27,11 @@ class ClientController extends AbstractController
     /**
      * @Route("/home", name="home")
      */
-    public function home(NoticeRepository $noticeRepository): Response
+    public function home(NoticeRepository $noticeRepository, MapServiceRepository $mapServiceRepository): Response
     {
         return $this->render('client/home.html.twig', [
             'notices' => $noticeRepository->findAll(Notice::class),
+            'points' => $mapServiceRepository->findAll()
         ]);
     }
 

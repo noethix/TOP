@@ -6,7 +6,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow:hidden;
+    /*overflow:hidden;*/
     min-width: 100%;
 }
 /*NAVABAR*/
@@ -207,7 +207,8 @@ html, body {
     color: rgba(0, 47, 167, 0.637);
     top: 5px;
 }
-
+/*MAP*/
+#map { height: 600px; width: 700px; margin: 10%; }
 /*FOOTER*/
 
 .footer-links {
@@ -322,3 +323,4 @@ html, body {
         height: 10px;
         padding: 0 4px;
     }
+}
