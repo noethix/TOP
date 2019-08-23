@@ -42,6 +42,11 @@ class GuestBlog
      */
     private $Service;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $content;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +108,18 @@ class GuestBlog
     public function setService(?string $Service): self
     {
         $this->Service = $Service;
+
+        return $this;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+
+    public function setContent(string $content): self
+    {
+        $this->content = $content;
 
         return $this;
     }
