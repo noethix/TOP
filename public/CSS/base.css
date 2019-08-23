@@ -500,6 +500,27 @@ form textarea {
      padding: 0 8px;
  }
 
+/*     ADMIN     */
+
+.admin-login {
+  padding-top: 15%;
+}
+
+.login-pic {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.crew-login {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  padding: 2%;
+}
+
+#inputUsername, #inputPassword {
+  margin: 2% 0;
+}
 
   @media screen and (max-width: 800px) {
 
