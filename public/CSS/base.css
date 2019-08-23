@@ -10,6 +10,11 @@ html, body {
   }
 /*     NAVABAR     */
 
+.navbar {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+}
 .top-top {
   position: relative;
    display: flex;
@@ -190,42 +195,70 @@ html, body {
     top: 5px;
   }
 
+/*     HOME     */
+
+.home-TOP {
+  display: flex;
+  flex-direction: row;
+}
+
+.notice-board {
+  flex-grow: 1;
+  width: 30%;
+}
+
+.intro {
+  flex-grow: 2;
+}
 /*     THE PROJECT     */
 
 .project-TOP {
   display: flex;
 }
 
-.who {
+.who, .shelter {
   flex-grow: 1 ;
-  width: 5%;
+  width: 20%;
 }
 
 .timetable {
   flex-grow: 2 ;
 }
 
-.shelter {
-  flex-grow: 1 ;
-  width: 5%;
-}
-
-.who-headers {
+.who-shelter-headers, .community-header  {
   font-family: 'Playfair Display', serif;
   text-align: center;
 }
 
-.community-header {
-  font-family: 'Playfair Display', serif;
-  text-align: center;
+.who-shelter-headers{
+  padding-bottom: 5%;
 }
-
 .who, .timetable, .shelter {
-  margin-top: 5%
+  margin-top: 15%;
 }
 
 .project-text {
-  padding: 10%;
+  padding: 10% 20%;
+  text-align: justify;
+  color: rgb(78, 78, 78);
+}
+
+.shelter-pic, .who-pic {
+  width: 100%;
+  max-width: 60%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figcaption {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(104, 104, 104);
+  font-size: 0.7rem;
+  font-weight: 300;
+  padding: 5% 20% 10% 20%;
   text-align: justify;
 }
 
@@ -236,15 +269,6 @@ html, body {
   linear-gradient(to bottom, #ffffff, rgba(218, 218, 218)) 1 100%;
 }
 
-.shelter-pic, .who-pic {
-  width: 100%;
-  max-width: 80%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .hr-two {
   color: rgb(218, 218, 218);
@@ -252,23 +276,33 @@ html, body {
   height:1px;
   margin: 3% auto;
 }
+
 .timetable-details {
-  padding: 3% 5% 5% 5%;
+  padding: 2% 5% 5% 5%;
   text-align: center;
 }
 
-.community-activities {
-  margin: 2% 0;
+.monday {
+  margin: 0 0 1% 0 !important;
+}
+
+.days {
+  line-height: 2;
+  margin: 3% 0 1% 0;
+  font-family: 'EB Garamond', serif;
+}
+
+.community-activities p {
+  line-height: 1.5;
+  font-size: 1.25rem;
+  color: rgb(78, 78, 78);
 }
 
 .news {
   margin-top: 5%;
+  padding: 0% 5%;
 }
 
-
-.news {
-  padding: 0 3%;
-}
 
 
 /*     NEED HELP?    */
@@ -278,7 +312,7 @@ html, body {
   font-size: 2rem;
   text-align: center;
   line-height: 1.8;
-  margin: 6% 6% 3% 6%;
+  padding: 13% 6% 3% 6%;
 }
 
 .phone-numbers {
@@ -318,6 +352,7 @@ html, body {
 ul li {
   padding: 2% 0;
   list-style: none;
+  font-size: 1.2rem;
 }
 
 ul li a {
