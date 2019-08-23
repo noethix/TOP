@@ -12,7 +12,7 @@ easy_admin:
                     - { property: 'Title' }
                     - { property: 'Date'}
                     - { property: 'Content', type: 'text_editor' }
-                    - { property: 'photo', type: 'file_upload' , type_options: { upload_filename: '[year]/[month]/[day].[extension]' , upload_dir: 'public\uploads\files\' } }
+                    - { property: 'photo', type: 'image' , type_options: { upload_filename: '[year]/[month]/[day].[extension]' , upload_dir: 'public\uploads\files\' } }
         Notice:
             class: App\Entity\Notice
             file_base_path: '..\uploads\files\'
