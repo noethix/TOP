@@ -132,9 +132,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 {% for point in points %}
 L.marker([{{point.coordinate}}]).addTo(map)
-.bindPopup('{{ point.name }}')
-    .openPopup();
+    .bindPopup('{{ point.name }}')
+        .openPopup();
+    
 {% endfor %}
+
    </script>
 
 

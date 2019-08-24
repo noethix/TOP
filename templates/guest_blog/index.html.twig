@@ -8,12 +8,16 @@
 
             {{ guest_blog.Title }}             {{ guest_blog.Service }} </br>
             {{ guest_blog.Date ? guest_blog.Date|date('Y-m-d') : '' }}
+             <img class="photo" src="{{ asset('PHOTOS/' ~ guest_blog.Photo()) }}" >
 
-
-                <td>
-                    <a href="{{ path('guest_blog_show', {'id': guest_blog.id}) }}">show</a>
+            {% if user == guest_blog.author %}
                     <a href="{{ path('guest_blog_edit', {'id': guest_blog.id}) }}">edit</a>
-                </td>
+                    <a href="{{ path('guest_blog_delete', {'id': guest_blog.id}) }}">delete</a>
+            {% endif %}
+            {% if is_granted('ROLE_ADMIN') %}
+            <a href="{{ path('guest_blog_delete', {'id': guest_blog.id}) }}">delete</a>
+            {% endif %}
+
             </tr>
         </tbody>
     </table>
