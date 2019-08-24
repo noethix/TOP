@@ -251,7 +251,8 @@ h2 {
     color: rgba(0, 47, 167, 0.637);
     top: 5px;
 }
-
+/*MAP*/
+#map { height: 600px; width: 700px; margin: 10%; }
 /*FOOTER*/
 
 .footer-links {
@@ -366,3 +367,4 @@ h2 {
         height: 10px;
         padding: 0 4px;
     }
+}

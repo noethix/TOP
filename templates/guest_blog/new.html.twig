@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New GuestBlog{% endblock %}
+{% block title %}Something to share ?{% endblock %}
 
 {% block body %}
-    <h1>Create new GuestBlog</h1>
+    <h1>I want to share this :</h1>
 
     {{ include('guest_blog/_form.html.twig') }}
 
-    <a href="{{ path('guest_blog_index') }}">back to list</a>
+    <a href="{{ path('guest_blog_index') }}">Back to blog</a>
 {% endblock %}

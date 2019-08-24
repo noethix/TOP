@@ -6,6 +6,9 @@ use App\Entity\GuestBlog;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class GuestBlogType extends AbstractType
 {
@@ -13,10 +16,10 @@ class GuestBlogType extends AbstractType
     {
         $builder
             ->add('Title')
-            ->add('Date')
-            ->add('Photo')
-            ->add('Service')
-            ->add('Author')
+            ->add('Service', TextType::class)
+            ->add('Photo' , FileType::class)
+            ->add('content' , TextareaType::class)
+            
         ;
     }
 

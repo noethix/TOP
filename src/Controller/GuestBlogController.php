@@ -20,8 +20,11 @@ class GuestBlogController extends AbstractController
      */
     public function index(GuestBlogRepository $guestBlogRepository): Response
     {
+        $user = $this->getUser();
+
         return $this->render('guest_blog/index.html.twig', [
             'guest_blogs' => $guestBlogRepository->findAll(),
+            'user' => $user,
         ]);
     }
 
@@ -30,11 +33,36 @@ class GuestBlogController extends AbstractController
      */
     public function new(Request $request): Response
     {
+        $user = $this->getUser();
         $guestBlog = new GuestBlog();
         $form = $this->createForm(GuestBlogType::class, $guestBlog);
         $form->handleRequest($request);
+        $now = new \DateTime('now');
+        $result = $now->format('Y-m-d');
+
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $guestBlog -> setDate($now);
+            $guestBlog -> setAuthor($user); 
+
+
+
+            if ($form['Photo']->getData() != null) {
+                $file = $form['Photo']->getData();
+                    // Efface le fichier et le nom déjà existant
+                if($guestBlog->getPhoto() != null) {
+                    $oldFile = $this->getParameter('kernel.project_dir') . '/public/PHOTOS/'.$guestBlog->getPhoto();
+                    if (file_exists($oldFile)) {
+                        unlink($oldFile);
+                    } 
+                }
+                
+                
+                $filename = str_replace(' ','-',$form['Title']->getData()).$result .'.'.$file->guessExtension();
+                $guestBlog->setPhoto($filename);
+                $file->move($this->getParameter('kernel.project_dir') . '/public/PHOTOS/', $filename);
+            }
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($guestBlog);
             $entityManager->flush();
