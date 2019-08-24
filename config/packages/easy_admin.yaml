@@ -6,13 +6,17 @@ easy_admin:
             file_base_path: '..\uploads\files\'
             list:
                 fields:
-                    - { property: 'photo', type: 'image' ,  base_path: '..\uploads\files\' }
+                    - { property: 'photo', type: 'image' ,  base_path: '%app.path.files%' }
+            show:
+                fields:
+                    - { property: 'image', type: 'image', base_path: '%files%' }
+
             form:
                 fields:
                     - { property: 'Title' }
                     - { property: 'Date'}
                     - { property: 'Content', type: 'text_editor' }
-                    - { property: 'photo', type: 'image' , type_options: { upload_filename: '[year]/[month]/[day].[extension]' , upload_dir: 'public\uploads\files\' } }
+                    - { property: 'imageFile', type: 'vich_image' }
         Notice:
             class: App\Entity\Notice
             file_base_path: '..\uploads\files\'
