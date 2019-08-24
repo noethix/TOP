@@ -120,24 +120,21 @@
     <h1 class="headers header-news ">News</h1>
         
         {% for news in news %}
-            <tr>
-                <td>{{ news.id }}</td>
-                <td>{{ news.Title }}</td>
-                <td>{{ news.Date ? news.Date|date('Y-m-d') : '' }}</td>
-                <td>{{ news.Content }}</td>
-                <td>{{ news.Photo }}</td>
-                <td>
-                    <a href="{{ path('news_show', {'id': news.id}) }}">show</a>
-                    <a href="{{ path('news_edit', {'id': news.id}) }}">edit</a>
-                </td>
-            </tr>
+            
+               
+                <h1>{{ news.Title | raw  }}</h1>
+                <p>{{ news.Date ? news.Date|date('d-m-Y') : '' }}</p>
+                <p>{{ news.Content | raw  }}</p>
+                <img src="{{ asset('uploads/files' ~ news.photo()) }}">
+               
+        
         {% else %}
-            <tr>
+           <!--<tr>
                 <td colspan="6">no records found</td>
-            </tr>
+            </tr>--> 
         {% endfor %}
-        </tbody>
-    </table>
+        
+    
 
     
 </section>
