@@ -125,7 +125,7 @@
                 <h1>{{ news.Title | raw  }}</h1>
                 <p>{{ news.Date ? news.Date|date('d-m-Y') : '' }}</p>
                 <p>{{ news.Content | raw  }}</p>
-                <img src="{{ asset('uploads/files' ~ news.photo()) }}">
+                <img src="file://{{ news.photo }}">
                
         
         {% else %}
