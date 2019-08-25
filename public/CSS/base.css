@@ -515,11 +515,36 @@ form textarea {
 .crew-login {
   text-align: center;
   font-family: 'Playfair Display', serif;
-  padding: 2%;
+  padding: 5% 0;
 }
 
+.sign-in {
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+  margin: 5% 0;
+}
+
+.btn-logout {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgb(212, 212, 212);
+  cursor: pointer;
+  margin: 2% 0;
+}
+
+.btn-logout a{
+  text-decoration: none;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.3rem;
+}
 #inputUsername, #inputPassword {
   margin: 2% 0;
+}
+
+/*     BLOG     */
+
+.blog-top {
+  padding-top: 15%;
 }
 
   @media screen and (max-width: 800px) {

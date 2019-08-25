@@ -1,8 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}GuestBlog index{% endblock %}
+{% block title %}Guest Blog{% endblock %}
 
 {% block body %}
+<section class="blog-top">
+ {% if is_granted('ROLE_ADMIN') %}
+<button class="btn btn-redirect">
+    <a href="{{ path('easyadmin') }}">* Go to Admin Panel * </a>
+</button>
+{% endif %}   
+</section>
 
         {% for guest_blog in guest_blogs %}
 
